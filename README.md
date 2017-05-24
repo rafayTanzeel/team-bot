@@ -28,12 +28,13 @@ Install the dependencies and devDependencies and start the server.
 $ yarn
 ```
 
-### MIT License
-
+## MIT License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
+[//]: # (Reference links used in the doc)
 
 [Node Package Manager (NPM)]: <https://www.npmjs.com/>
 [Node.js]: <https://nodejs.org/>
 [Yarn]: <https://yarnpkg.com/>
+
