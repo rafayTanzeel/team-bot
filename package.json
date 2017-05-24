@@ -2,12 +2,20 @@
   "name": "team-bot-app",
   "version": "1.0.0",
   "description": "Our Web App",
-  "main": "app.js",
+  "main": "src/private/server/server.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run security-check",
+    "start": "npm-run-all --parallel server",
+    "server": "node src/private/server/server.js",
+    "security-check": "nsp check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git@github.com:rafayTanzeel/team-bot.git",
   "author": "Rafay Tanzeel",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "npm-run-all": "^4.0.2",
+    "nsp": "^2.6.3"
+  }
 }

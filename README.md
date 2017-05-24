@@ -28,6 +28,12 @@ Install the dependencies and devDependencies and start the server.
 $ yarn
 ```
 
+Run Server
+```sh
+$ npm start -s (Recommended Default Port 8080)
+$ PORT=8080 npm run server
+$ npm run server 8080
+```
 ## MIT License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -37,4 +43,3 @@ $ yarn
 [Node Package Manager (NPM)]: <https://www.npmjs.com/>
 [Node.js]: <https://nodejs.org/>
 [Yarn]: <https://yarnpkg.com/>
-
