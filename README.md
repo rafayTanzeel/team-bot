@@ -28,13 +28,48 @@ Install the dependencies and devDependencies and start the server.
 $ yarn
 ```
 
-Run Server
+### Server
+
+Format for passing argument to npm script
+```sh
+npm run <command> [-- <args>]
+```
+
+Here are multiple ways to run the server
 ```sh
 $ npm start -s (Recommended Default Port 8080)
-$ PORT=8080 npm run server
-$ npm run server 8080
+$ npm run server -- -p 8080 (Pick Any Available Port No)
 ```
-## MIT License
+
+
+
+### Logging Techniques
+
+The common approach to log the output in Node is to use console.log()
+A better approach is to use [Winston] logging methods
+
+| Methods |
+| ------ |
+| debug |
+| info |
+| warn |
+| error |
+
+
+
+### Solar System Exploration, 1950s – 1960s
+
+- [ ] Mercury
+- [x] Venus
+- [x] Earth (Orbit/Moon)
+- [x] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
+
+## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -43,3 +78,4 @@ $ npm run server 8080
 [Node Package Manager (NPM)]: <https://www.npmjs.com/>
 [Node.js]: <https://nodejs.org/>
 [Yarn]: <https://yarnpkg.com/>
+[Winston]: <https://www.npmjs.com/package/winston>

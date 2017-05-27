@@ -1,20 +1,25 @@
 const express = require('express');
 const open = require('open');
 const path = require('path');
+const nconf = require('./lib/config/nconfConfig');
+const winston = require('./lib/config/winstonConfig');
+const rootPath = require('app-root-path');
+
 const app = express();
 
-const PORT = process.env.PORT || (process.argv[2] || 8080);
+const PORT = nconf.get('http:port');
 
 const baseurlDisplay = () => {
   const baseurl = 'http://localhost:' + PORT + '/';
-  console.log('Connection with URL %s', baseurl);
+  winston.info('Listening on port: %s', PORT);
+  winston.info('Connection with URL %s', baseurl);
   open(baseurl);
 };
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/html/index.html'));
+  res.sendFile(rootPath + '/src/public/html/index.html');
 });
 
 app.listen(PORT, (err) => {
-  (err) ? console.log(err) : baseurlDisplay();
+  (err) ? winston.error(err) : baseurlDisplay();
 });

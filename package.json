@@ -14,8 +14,14 @@
   "author": "Rafay Tanzeel",
   "license": "MIT",
   "devDependencies": {
-    "express": "^4.15.3",
     "npm-run-all": "^4.0.2",
-    "nsp": "^2.6.3"
+    "nsp": "^2.6.3",
+    "open": "^0.0.5"
+  },
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "express": "^4.15.3",
+    "nconf": "^0.8.4",
+    "winston": "^2.3.1"
   }
 }
